@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-name" id="loader-name">Sufian Shaikh<span style="color:var(--accent)">.</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-counter" id="loader-counter">000</div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--charcoal)" stroke="var(--accent)"
+        stroke-width="1.5" />
+      <text x="6" y="22" font-family="monospace" font-size="14" fill="var(--accent)" font-weight="bold">&lt;/&gt;</text>
+    </svg>
+  </div>
+
+  <!-- PROJECT HOVER IMAGE -->
+  <div id="proj-hover-img"><img src="" alt="" id="proj-hover-src" /></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">ss<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:sufiantheaffiliate@outlook.com" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="mailto:sufiantheaffiliate@outlook.com">Hire Me →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-number" aria-hidden="true">01</div>
+
+    <div class="hero-index reveal">
+      <span>Machine Learning and Web Developer</span>
+      <span>&amp; Creative Technologist</span>
+    </div>
+
+    <h1 class="hero-title">
+      <div class="overflow-hidden"><span class="title-line block">Sufian</span></div>
+      <div class="overflow-hidden"><span class="title-line block"><em class="serif-word">Shaikh</em></span></div>
+      <div class="overflow-hidden"><span class="title-line block outline-text">N.</span></div>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <div>
+        <div class="hero-desc">
+          Building digital experiences<br>
+          that live at the intersection of<br>
+          <strong style="color:var(--charcoal)">code, craft &amp; creativity.</strong>
+        </div>
+        <div class="hero-availability" style="margin-top:1.5rem; display:inline-flex;">
+          <div class="hero-dot"></div>
+          Available for freelance projects
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- items repeated for seamless loop -->
+      <span class="marquee-item">CSS</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">HTML</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">MySQL</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Python</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Django</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Django REST Framework</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Javascript</span><span class="marquee-item marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div>
+      <div class="section-label reveal">About Me</div>
+      <h2 class="about-title reveal">
+        Crafting<br>
+        <em>beautiful</em><br>
+        digital worlds
+      </h2>
+      <p class="about-text reveal">
+        I'm Sufian Shaikh - a Junior Student in University of Sharjah in Computer Science. With a passion in Designing
+        and developing websites with AI integrated features. I have a strong foundation in both frontend and backend
+        technologies, allowing me to build seamless and engaging digital experiences from end to end. I thrive on
+        solving complex problems and bringing creative ideas to life through code.
+      </p>
+      <div class="about-stats reveal">
+        <div class="stat-box">
+          <div class="stat-num" data-count="2">0</div>
+          <div class="stat-label">Years Building</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="4">0</div>
+          <div class="stat-label">Projects Build</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="8">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="skills-group">
+        <div class="skills-group-title">Frontend</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>HTML</span></div>
+          <div class="skill-tag"><span>CSS</span></div>
+          <div class="skill-tag"><span>JavaScript</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Backend</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Python</span></div>
+          <div class="skill-tag"><span>Django</span></div>
+          <div class="skill-tag"><span>Django REST Framework</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Tools & Design</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Git</span></div>
+          <div class="skill-tag"><span>GitHub</span></div>
+          <div class="skill-tag"><span>Postman</span></div>
+          <div class="skill-tag"><span>VS Code</span></div>
+          <div class="skill-tag"><span>Windsurf</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <div class="projects-title">
+          Projects<br>
+          <span style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">
+            & Case Studies
+          </span>
+        </div>
+      </div>
+      <div class="projects-count reveal">02 Projects</div>
+    </div>
+
+    <div id="project-list">
+
+      <!-- PROJECT 1 -->
+      <div class="project-item reveal" data-img="images\image.png">
+
+        <div class="project-num">01</div>
+
+        <div>
+          <div class="project-name">DineEase Restaurant Website</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">
+            Dine Ease is a modern, responsive frontend web application designed for a premium dining experience. This
+            project features a clean aesthetic with a gold-and-dark theme, providing users with a seamless interface to
+            explore culinary offerings, make reservations, and get in touch.
+          </div>
+        </div>
+
+        <div class="project-tech">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+
+        <a href="https://github.com/SufianDev20/DineEase_Restaurant_Website" class="project-link" target="_blank">
+
+          View
+
+          <svg width="14" height="14" viewBox="0 0 14 14">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+
+        </a>
+      </div>
+
+
+      <!-- PROJECT 2 -->
+      <div class="project-item reveal" data-img="images\Interface.png">
+
+        <div class="project-num">02</div>
+
+        <div>
+          <div class="project-name">AI Research Assistant</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">
+            AI-powered academic research platform built with Django, OpenAlex API,
+            and OpenRouter LLMs featuring intelligent model fallback, paper
+            summarization, performance tracking, and real-time analytics.
+          </div>
+        </div>
+
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Django</span>
+          <span class="tech-badge">OpenAlex API</span>
+          <span class="tech-badge">OpenRouter LLMs</span>
+          <span class="tech-badge">PyAlex</span>
+        </div>
+
+        <a href="https://github.com/SufianDev20/AI_Research_Assistant" class="project-link" target="_blank">
+
+          View
+
+          <svg width="14" height="14" viewBox="0 0 14 14">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- GITHUB SECTION -->
+  <section id="github-section">
+    <div class="github-inner">
+      <div class="reveal">
+        <div class="section-label" style="color:rgba(245,240,232,0.4);">Open Source</div>
+        <h2 class="github-title">Code I've<br>put into <em>the world.</em></h2>
+        <p class="github-desc">Every commit tells a story. Every repo is a conversation. I believe in building in public
+          and contributing to the ecosystem that built me.</p>
+        <a href="https://github.com/SufianDev20" target="_blank" class="github-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View GitHub Profile
+        </a>
+      </div>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="contact-inner">
+          <div>
+            <div class="section-label reveal">Get In Touch</div>
+            <div class="contact-big reveal">
+              Let's<br>
+              <em>build</em><br>
+              together.
+            </div>
+            <p class="contact-sub reveal">
+              Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a
+              good
+              conversation.
+            </p>
+            <div class="contact-links reveal">
+              <a href="mailto:sufiantheaffiliate@outlook.com" class="contact-link">
+                <div>
+                  <div class="contact-link-name">Email</div>
+                  <div class="contact-link-handle">sufiantheaffiliate@outlook.com</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+              <a href="https://github.com/SufianDev20" target="_blank" class="contact-link">
+                <div>
+                  <div class="contact-link-name">GitHub</div>
+                  <div class="contact-link-handle">github.com/SufianDev20</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/sufianshaikh25/" target="_blank" class="contact-link">
+                <div>
+                  <div class="contact-link-name">LinkedIn</div>
+                  <div class="contact-link-handle">https://www.linkedin.com/in/sufianshaikh25/</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <div class="section-label">Send A Message</div>
+            <form onsubmit="handleFormSubmit(event)" style="margin-top:2rem;">
+              <div class="form-row">
+                <label class="form-label" for="fname">Your Name</label>
+                <input type="text" id="fname" class="form-input" placeholder="John Doe" required />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="femail">Email Address</label>
+                <input type="email" id="femail" class="form-input" placeholder="john@example.com" required />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="fsubject">Subject</label>
+                <input type="text" id="fsubject" class="form-input" placeholder="Project Inquiry" />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="fmsg">Message</label>
+                <textarea id="fmsg" class="form-textarea" rows="4" placeholder="Tell me about your project..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="form-submit"><span>Send Message →</span></button>
+              <div id="form-success"
+                style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;">
+                ✓ Message sent! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-left">© 2026 Sufian Shaikh. All rights reserved.</div>
+        <div class="footer-logo">SS<span>.</span>dev</div>
+      </footer>
+
+      <script src="script.js"></script>
+</body>
+
+</html>
